@@ -303,29 +303,29 @@ export default {
             }
         },
         getLogin() {
-            this.axios
-                .post("/api/Users/login", {
-                    account: this.statLogin.Loginname,
-                    password: this.$md5(this.statLogin.Loginpwd),
-                })
-                .then((res) => {
-                    if (res.data.status == 200) {
-                        this.$message({
-                            showClose: true,
-                            message: "登录成功！",
-                            type: "success",
-                        });
-                        const token = res.data.result.token;
-                        window.localStorage.setItem("login_token", token);
-                        this.$router.push("/Home");
-                    } else {
-                        this.$message({
-                            showClose: true,
-                            message: res.data.result,
-                            type: "error",
-                        });
-                    }
-                });
+            this.post("/api/Users/login", {
+                account: this.statLogin.Loginname,
+                password: this.$md5(this.statLogin.Loginpwd),
+            }).then((res) => {
+                if (res.data.status == 200) {
+                    this.$message({
+                        showClose: true,
+                        message: "登录成功！",
+                        type: "success",
+                    });
+                    const token = res.data.result.token;
+                    window.localStorage.setItem("login_token", token);
+                    this.$router.push("/Home");
+                } else {
+                    // 失败
+                    this.$message({
+                        showClose: true,
+                        message: res.data.result,
+                        type: "error",
+                    });
+                    return;
+                }
+            });
         },
     },
 };

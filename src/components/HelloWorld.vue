@@ -2,10 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     hahaha
-
-
-     <!-- 分支 -->
-     <span>
+    <!-- 分支 -->
+    <span>
       分支
     </span>
   </div>

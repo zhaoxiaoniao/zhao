@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+
+    我的代码
     冲突
     hahaha
     <!-- 分支 -->

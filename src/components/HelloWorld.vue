@@ -1,6 +1,12 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+
+
+    <!-- 分支 -->
+    <span>
+      分支
+    </span>
   </div>
 </template>
 

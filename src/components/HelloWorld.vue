@@ -1,8 +1,17 @@
 <template>
   <div class="hello">
-    hahaha
+<<<<<<<<< Temporary merge branch 1
     <h1>{{ msg }}</h1>
-    主枝干
+    hahaha
+
+=========
+    hahaha
+
+     <!-- 分支 -->
+     <span>
+      分支
+    </span>
+>>>>>>>>> Temporary merge branch 2
   </div>
 </template>
 
